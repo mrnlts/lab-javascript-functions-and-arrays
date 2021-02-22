@@ -146,19 +146,16 @@ if (arr.includes(keyword)) {
 }
 
 // Iteration #7: Count repetition
-const wordsCount = [
-  'machine',
-  'matter',
-  'subset',
-  'trouble',
-  'starting',
-  'matter',
-  'eating',
-  'matter',
-  'truth',
-  'disobedience',
-  'matter'
-];
+function howManyTimes(arr, keyword) {
+  let box = [];
+  let tempArray = arr.sort();
+  for (i = 0; i < tempArray.length; i++) {
+    if (tempArray[i] === keyword) {
+      box.push(tempArray[i])
+    }
+  }
+  return box.length;
+}
 
 // Iteration #8: Bonus
 
