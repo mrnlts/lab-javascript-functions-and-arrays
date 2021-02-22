@@ -40,6 +40,29 @@ function sumNumbers (arr){
   return total;
 }
 
+function sum (value) {
+  var box = 0;
+  for (i = 0; i < value.length; i++) {
+  switch (typeof value[i]) {
+    case 'string':
+      box = box + (value[i].length);
+      break;
+    case 'number':
+      box = box + (value[i]);
+      break;
+    case 'boolean':
+      box = box + (+value[i]);
+      break;
+    case 'object':
+      throw new Error("Unsupported data type sir or ma'am");
+      break;
+    case 'array':
+      throw new Error("Unsupported data type sir or ma'am");
+  }
+}
+  return box;
+  }
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 function averageNumbers (arr) {
