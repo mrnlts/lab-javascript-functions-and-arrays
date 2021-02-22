@@ -83,7 +83,19 @@ return total/arr.length;
 }
 
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength (arr) {
+  if (arr == "") {
+    return null;
+  };
+  if (toString.call(arr) !== "[object Array]") {
+    return false;
+}
+let total =  0;
+for (let i = 0; i < arr.length; i++) {
+  total += arr[i].length;
+}
+return total/arr.length;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
