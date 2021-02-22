@@ -59,7 +59,7 @@ function sum (value) {
     case 'array':
       throw new Error("Unsupported data type sir or ma'am");
   }
-}
+}const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
   return box;
   }
 
@@ -95,6 +95,27 @@ for (let i = 0; i < arr.length; i++) {
   total += arr[i].length;
 }
 return total/arr.length;
+}
+
+function avg(arr) {
+  var box = 0;
+  if (arr == "") {
+    return null;
+  };
+  for (i = 0; i < arr.length; i++) {
+    switch (typeof arr[i]) {
+      case 'string':
+        box += (arr[i].length);
+        break;
+      case 'number':
+        box += arr[i];
+        break;
+      case 'boolean':
+        box = box + (+arr[i]);
+    }
+  }
+  let result = box/arr.length;
+  return Math.round(result * 100) / 100;
 }
 
 // Iteration #5: Unique arrays
