@@ -59,7 +59,7 @@ function sum (value) {
     case 'array':
       throw new Error("Unsupported data type sir or ma'am");
   }
-}const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+} const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
   return box;
   }
 
@@ -98,7 +98,7 @@ return total/arr.length;
 }
 
 function avg(arr) {
-  var box = 0;
+  let box = 0;
   if (arr == "") {
     return null;
   };
@@ -119,19 +119,19 @@ function avg(arr) {
 }
 
 // Iteration #5: Unique arrays
-const wordsUnique = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
-];
+function uniquifyArray(arr) {
+  if (arr == "") {
+    return null;
+  };
+  let unique = {};
+  arr.forEach(function(i) {
+    if(!unique[i]) {
+      unique[i] = true;
+    }
+  });
+  return Object.keys(unique);
+}
+
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
